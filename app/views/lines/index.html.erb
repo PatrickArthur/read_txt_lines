@@ -1,0 +1,18 @@
+<%= form_tag lines_path, method: :get do %>
+<table align="center" width="500px" border=1 cellpadding=4>
+    <tr>
+      <td><%= text_field_tag :keywords, params[:keywords], size: 75 %></td>
+    </tr>
+    <tr>
+      <td><%= submit_tag "Search", name: nil %></td>
+    </tr>
+</table>
+<% end %>
+
+<% if @search_results.present? %>
+  <% @search_results.each do |k,v| %>
+    <p><%=link_to k,line_path(k)%> - <%=link_to v, line_path(k)%></p>
+  <% end %>
+<% else %>
+  <p> No Lines Retured </p>
+<% end %>
