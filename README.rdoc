@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. User runs ./run.sh lib/test.txt  in the terminal to start server and read in text file. User is taken to an index page where they can type on the line index on the search to see if the line was read in the text file. If the line was in the text file a link to the path /lines/:id where a user can see status code 200 and the text from that line. If the line index typed in exceeds the number of lines in the file the index page returns no results. A user can type lines/line index to get the message, if the line doesn't exist it returns 413.
 
-Things you may want to cover:
+2. To check how my program handles different file sizes I would make three files that are 1, 10, 100 gb files and they test then in jmeter.
 
-* Ruby version
+3. To check how the system performs with different number of users I would use Jmeter and go to thread group to type in how many users I wan to simulate hitting the site.
 
-* System dependencies
+4. Just stackoverflow for a few questions.
 
-* Configuration
+5. It took me about a half hour to write the code and a half hour to test and refactor. If I had more time I would hae tried to create two classes one to do some validations to make sure the file is readable and a text_import class to do the importing of the file.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+6. I would like to have added more unit tests, organized my code in more classes, add some validations and add the option for users to load the text file in the index page.
